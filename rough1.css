@@ -1,0 +1,22 @@
+div{
+    font-size:20px;
+    word-spacing:6px;
+    border: solid black; 
+    height: 320px;
+    width: 1250px;
+    margin: 100px
+    
+   
+   
+}
+.p{
+    font-size: 25px;
+    text-align:center ;
+    word-spacing: 7px;
+    background-color: yellow;
+    padding: 65px;
+    height: 15px;
+    border:solid 30px blue;
+    margin:20px 10px 10px 50px;
+
+}

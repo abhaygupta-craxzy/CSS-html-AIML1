@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    top: 0%;
+    left: 0%;
+    
+    background-color: rgb(242, 239, 239);
+}
+
+.outer-box {
+    background-color: white;
+    width: 80%;
+    margin: 20px auto;
+    padding: 40px;
+    border: 7px solid #000;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    font-size: 44px;
+    margin-bottom: 10px;
+}
+.blue-box {
+    background-color: blue;
+    margin: 20px 0;
+    padding: 40px;
+}
+
+.yellow-box {
+    background-color: yellow;
+    padding: 20px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
