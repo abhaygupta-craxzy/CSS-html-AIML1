@@ -8,7 +8,7 @@
 .b1{
     display: inline center;
     background-color: rgb(238, 233, 233);
-    height: 450px;
+    height: 500px;
     padding: 10px;
     margin: 10px 500px 0px 500px;
     color: rgb(255, 255, 255);
@@ -20,7 +20,7 @@
 .b2{
     background-color: rgba(10, 9, 9, 0.396);
     padding: 20px;
-    height: 245px ;
+    height: 260px ;
     margin: 10px 10px 15px 10px ;
     box-shadow: inset black 10px;
     border-radius: 3px;
