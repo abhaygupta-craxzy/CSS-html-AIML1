@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(circle at right, #0b2c44, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #e6faff;
+}
+
+/* Floating Locks */
+.lock {
+  position: absolute;
+  font-size: 42px;
+  opacity: 0.7;
+  animation: float 6s infinite ease-in-out;
+}
+
+.lock.blue { color: #4cc9f0; }
+.lock.pink { color: #ff3d81; }
+
+.lock:nth-child(1) { top: 20%; left: 20%; }
+.lock:nth-child(2) { top: 60%; left: 30%; }
+.lock:nth-child(3) { top: 40%; right: 20%; }
+.lock:nth-child(4) { bottom: 15%; right: 35%; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Login Container */
+.login-box {
+  width: 360px;
+  padding: 35px;
+  background: rgba(10, 30, 50, 0.75);
+  border-radius: 30px;
+  border: 2px solid #4cc9f0;
+  box-shadow: 0 0 30px rgba(76,201,240,0.5);
+  z-index: 2;
+}
+
+/* HUD Avatar Container */
+.hud-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+/* Outer HUD Frame */
+.hud-frame {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  border: 2px solid #4cc9f0;
+  clip-path: polygon(
+    15% 0%, 85% 0%,
+    100% 15%, 100% 85%,
+    85% 100%, 15% 100%,
+    0% 85%, 0% 15%
+  );
+  box-shadow: 0 0 18px rgba(76, 201, 240, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner avatar */
+.hud-frame img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #4cc9f0;
+  background: #0b2c44;
+}
+
+/* Decorative HUD lines */
+.hud-frame::before,
+.hud-frame::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background: #4cc9f0;
+}
+
+.hud-frame::before {
+  top: -6px;
+  left: 20px;
+}
+
+.hud-frame::after {
+  bottom: -6px;
+  right: 20px;
+}
+
+
+/* Scanning line */
+.scan-line {
+  position: absolute;
+  width: 140%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #4cc9f0,
+    transparent
+  );
+  top: 50%;
+  left: -20%;
+  animation: scanRotate 2.5s linear infinite;
+  filter: drop-shadow(0 0 6px #4cc9f0);
+}
+
+/* Rotate around avatar */
+@keyframes scanRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Slight pulse for frame */
+.scan-active {
+  animation: framePulse 2s ease-in-out infinite;
+}
+
+@keyframes framePulse {
+  0%, 100% {
+    box-shadow: 0 0 18px rgba(76, 201, 240, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(76, 201, 240, 1);
+  }
+}
+
+
+
+/* Inputs */
+.input {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input input {
+  width: 100%;
+  padding: 14px 45px;
+  border-radius: 30px;
+  background: transparent;
+  border: 1.5px solid #4cc9f0;
+  color: #e6faff;
+  outline: none;
+}
+
+.input i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4cc9f0;
+}
+
+.input .fa-user,
+.input .fa-lock {
+  left: 16px;
+}
+
+.input .check {
+  right: 16px;
+  display: none;
+}
+
+/* Options */
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin: 15px 0 20px;
+}
+
+.options a {
+  color: #9bdcf9;
+  text-decoration: none;
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  background: #dffcff;
+  border: none;
+  font-size: 16px;
+  color: #001219;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #4cc9f0;
+}
+
+
+/* Divider */
+.divider {
+  text-align: center;
+  margin: 22px 0 16px;
+  font-size: 12px;
+  color: #9bdcf9;
+}
+
+/* Social Buttons */
+.social button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social .google {
+  background: #fff;
+  color: #000;
+}
+
+.social .linkedin {
+  background: #0a66c2;
+  color: #fff;
+}
+
+.social .facebook {
+  background: #1877f2;
+  color: #fff;
+}
+
+/* Lock reaction states */
+.lock.active {
+  color: #4cc9f0;
+  transform: scale(1.2);
+}
+
+.lock.error {
+  color: #ff3d81;
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0%,100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+}
