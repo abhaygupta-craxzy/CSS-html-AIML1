@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    background: #667eea;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+
+.container{
+    background:white;
+    width:900px;
+    padding:30px 40px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    text-align:center;
+}
+
+
+h1{
+    margin-bottom:20px;
+    color:#333;
+}
+
+.box{
+    margin:14px 0;
+}
+
+label{
+    display:inline-block;
+    width:120px;
+    font-weight:bold;
+}
+
+
+input[type="text"],
+input[type="email"],
+select{
+    padding:8px;
+    width:220px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    transition:0.3s;
+}
+
+textarea{
+    width:300px;
+    height:80px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    padding:8px;
+}
+
+
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:#667eea;
+    box-shadow:0 0 5px rgba(102,126,234,0.6);
+}
+
+
+button{
+    padding:8px 16px;
+    border:none;
+    border-radius:6px;
+    background:#667eea;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#5a67d8;;
+}
+
+</style>       
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h1> Student Registration form </h1>
+
+  <hr>
+    <br>
+
+        <form action="form.png">
+
+            <div class="form">
+                <label>Full Name:</label>
+                <input type="text" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="box">
+                <label>Course:</label>
+                <input type="text" placeholder="Enter your course here" required>
+            </div>
+
+            <div class="box">
+                <label>Branch:</label>
+                <input type="text" placeholder="Enter your Branch here" required>
+            </div>
+
+
+            <div class="box">
+                <label>Email: </label>
+                <input type="email" placeholder="Enter your Email here" required>
+            </div>
+
+            <div class="box">
+                <label>Gender:</label>
+                <label><input type="radio" name="gender" required> Male</label>
+                <label><input type="radio" name="gender"> Female</label>
+                <label><input type="radio" name="gender"> Other</label>
+            </div>
+
+            <div class="box">
+                <label>Contact No:</label>
+                <input type="text" placeholder="Enter phone number" required>
+            </div>
+
+            <div class="box">
+                <label>Address:</label>
+                <textarea placeholder="Enter your address" required></textarea>
+            </div>
+
+            <button type="submit">Register</button>
+            <button type="reset">Clear</button>
+
+
+
+
+
+        </form>
+    </div>
+</body>
+
+</html>
